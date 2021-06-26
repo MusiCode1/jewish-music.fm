@@ -1,16 +1,9 @@
 <script>
-	import { progress_val, progress_max } from "./globals";
-
-	let opacity = 1,
-		visibility = "visible";
-
-	function close() {
-		opacity = 0;
-		visibility = "hidden";
-	}
+	import { progress_val, progress_max, opacity, visibility } from "./globals";
+	import { close } from "./close";
 </script>
 
-<div id="window" style="visibility:{visibility}; opacity: {opacity};">
+<div id="window" style="visibility:{$visibility}; opacity: {$opacity};">
 	<div id="bar">
 		<div id="window-text">הורדה מאתר Jewish-music.Fm</div>
 		<div id="close" on:click={close} />
@@ -20,6 +13,11 @@
 		<progress value={$progress_val} max={$progress_max} />
 
 		<div id="text" />
+		<div id="credit">
+			<a href="https://github.com/MusiCode1/jewish-music.fm" target="_">
+				<em>MusiCode</em>
+			</a>
+		</div>
 	</div>
 </div>
 
@@ -101,5 +99,10 @@
 		overflow-y: scroll;
 		height: calc(100% - 50px);
 		direction: rtl;
+	}
+
+	#credit {
+		text-align: left;
+		color: #b6abab;
 	}
 </style>

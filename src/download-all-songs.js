@@ -1,16 +1,14 @@
 
-import { progress_max, progress_val } from './globals';
+import { progress_max, progress_val, stop_function } from './globals';
+import { my_require } from "./my-require";
 import format from "format-util";
 import { text } from "./text";
-//import JSZip from "jszip";
-import { my_require } from "./my-require";
 
 export async function download_all_songs() {
 
 	await my_require("https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js");
 
 	const audio_list = document.querySelectorAll("audio > source");
-
 
 	let zip = new window.JSZip();
 
@@ -19,6 +17,10 @@ export async function download_all_songs() {
 	let i = 0;
 
 	for (const source of audio_list) {
+
+		if (stop_function.v) {
+			throw new Error("window closed!");
+		}
 
 		let url = source.src.replace("http://", "https://");
 
@@ -109,6 +111,13 @@ function download_file(url, reply = 0) {
 					}, 1000);
 
 					while (true) {
+
+						if (stop_function.v) {
+							clearInterval(interval);
+							controller.close();
+							throw new Error("window closed!");
+						}
+
 						const { done, value } = await reader.read();
 
 						if (done) {

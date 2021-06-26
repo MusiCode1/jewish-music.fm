@@ -1,14 +1,14 @@
-
+import { opacity, visibility, stop_function } from "./globals";
 import app_div from "./app_element";
 
 export function close() {
 
-    document.querySelector("#window").style.opacity = 0;
-    document.querySelector("#window").style.visibility = "hidden";
+    stop_function.v = true;
 
-    setTimeout(()=>{
+    opacity.set(0);
+    visibility.set("hidden");
+
+    setTimeout(() => {
         app_div.remove();
     }, 3 * 1000);
-
-    
 }

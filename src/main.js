@@ -24,8 +24,16 @@ import App from "./App.svelte";
 
 	} catch (error) {
 
-		alert(error);
-		throw error;
+		if (error.massage === "window closed!") {
+
+			console.log(error.massage);
+			throw error;
+
+		} else {
+
+			alert(error);
+			throw error;
+		}
 	}
 
 })();
