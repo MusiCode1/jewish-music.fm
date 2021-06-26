@@ -87,7 +87,7 @@ export default [
 			sourcemap: false,
 			format: 'iife',
 			name: 'app',
-			file: 'public/build/require-main.js'
+			file: 'public/build/require-main.min.js'
 		},
 		plugins: [
 
