@@ -56,12 +56,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		text-align: center;
 
 		font-size: 24px;
 		line-height: 28px;
 		color: #ececec;
 
 		font-family: system-ui;
+
+		position: relative;
+		width: calc(100% - 60px);
 	}
 
 	#close {
