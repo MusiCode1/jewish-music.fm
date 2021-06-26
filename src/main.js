@@ -28,7 +28,7 @@ import App from "./App.svelte";
 		throw error;
 	}
 
-});
+})();
 
 
 
