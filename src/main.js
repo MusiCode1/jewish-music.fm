@@ -5,7 +5,7 @@ import { close } from "./close";
 import { check } from "./check";
 import App from "./App.svelte";
 
-(window.app = async () => {
+(async () => {
 	try {
 
 		console.log("Musicode7");
