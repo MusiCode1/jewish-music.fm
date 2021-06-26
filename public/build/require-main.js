@@ -1,1 +1,1 @@
-!function(){"use strict";(async()=>{!async function(e){const t=document.createElement("script");t.type="text/javascript",t.src=e,document.head.appendChild(t),await new Promise((e=>t.onload=e))}("https://cdn.jsdelivr.net/gh/MusiCode1/jewish-music.fm/public/build/bundle.js")})()}();
+!function(){"use strict";(async()=>{!async function(e){const t=document.createElement("script");t.type="text/javascript",t.src=e,document.head.appendChild(t),await new Promise((e=>t.onload=e))}("https://cdn.jsdelivr.net/gh/MusiCode1/jewish-music.fm@0.0.4/public/build/bundle.js")})()}();
