@@ -9,7 +9,7 @@ import App from "./App.svelte";
 	try {
 
 		console.log("Musicode7");
-		console.log("https://gist.github.com/MusiCode1/c50432ad3f413a958e6f3aea7c214cfc");
+		console.log("https://github.com/MusiCode1/jewish-music.fm");
 
 		check();
 

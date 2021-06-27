@@ -22,4 +22,6 @@ async function get_latest_release_tag_name(repo) {
     const releases = await res.json();
 
     console.log(releases[0].tag_name);
+
+    return releases[0].tag_name;
 }
