@@ -35,7 +35,7 @@ export default [
 			sourcemap: !production,
 			format: 'iife',
 			name: 'app',
-			file: 'public/build/bundle.js'
+			file: 'build/bundle.js'
 		},
 		plugins: [
 			svelte({
@@ -87,7 +87,7 @@ export default [
 			sourcemap: false,
 			format: 'iife',
 			name: 'app',
-			file: 'public/build/require-main.min.js'
+			file: 'build/require-main.min.js'
 		},
 		plugins: [
 
