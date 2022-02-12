@@ -14,4 +14,6 @@ javascript: (async()=>{const t="MusiCode1/jewish-music.fm";!async function(t){co
   3. פתחו את אתר jewishMusic.FM.
   4. עברו לאלבום כלשהו.
   5. לחצו על הסימנייה והמתינו.
+
+  נכתב עבור דיירי דירת 'ניצנים', אשדוד.
 </div>
