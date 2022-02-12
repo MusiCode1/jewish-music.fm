@@ -7,7 +7,7 @@ import { my_require } from "./my-require";
 
     const version = "0.0.7";
 
-    const url = `https://cdn.jsdelivr.net/gh/${repo}@${version}/build/bundle.js`;
+    const url = `https://cdn.jsdelivr.net/gh/${repo}@${version}/public/build/bundle.js`;
         //"http://localhost:5000/build/bundle.js?1";
 
 
