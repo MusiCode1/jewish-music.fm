@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { progress_val, progress_max, opacity, visibility } from "./globals";
 	import { close } from "./close";
 </script>
