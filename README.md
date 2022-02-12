@@ -7,7 +7,7 @@
 <div dir="ltr">
   
   ```js
-javascript: (async()=>{const t="MusiCode1/jewish-music.fm";!async function(t){const e=document.createElement("script");e.type="text/javascript",e.src=t,document.head.appendChild(e),await new Promise((t=>e.onload=t))}(`https://cdn.jsdelivr.net/gh/${t}@${await async function(t){const e=await fetch(`https://api.github.com/repos/${t}/releases`),n=await e.json();return console.log(n[0].tag_name),n[0].tag_name}(t)}/build/bundle.js`)})();
+!function(){"use strict";(async()=>{!async function(e){const t=document.createElement("script");t.type="text/javascript",t.src=e,document.head.appendChild(t),await new Promise((e=>t.onload=e))}("https://cdn.jsdelivr.net/gh/MusiCode1/jewish-music.fm@0.0.7/build/bundle.js")})()}();
   ```
  </div> 
   
@@ -17,8 +17,8 @@ javascript: (async()=>{const t="MusiCode1/jewish-music.fm";!async function(t){co
 
   נכתב עבור דיירי דירת 'ניצנים', אשדוד.
 
-  יומן שינויים:
-  0.0.7
-  - עברתי מ- Js ל- Ts.
+  ## יומן שינויים:
+  ### 0.0.7
+  - עברתי מ- `JavaScript` ל- `TypeScript`.
   - שם השיר הוא כעת בעברית, ולא כפי שהיה מקודם באנגלית.
 </div>
