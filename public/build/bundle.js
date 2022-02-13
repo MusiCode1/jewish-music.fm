@@ -194,7 +194,7 @@
         the_div.classList.add("download_from_jewish_music");
         document.body.appendChild(the_div);
         document.body.appendChild(style);
-        await new Promise((resolve) => the_div.onload = resolve);
+        await new Promise((resolve) => the_div.addEventListener("load", resolve));
     }
 
     window.close = close;
