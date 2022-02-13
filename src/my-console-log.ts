@@ -1,9 +1,9 @@
 
 export function my_console_log(txt: string) {
 
-	console.log(txt);
-
 	const my_console = document.querySelector<HTMLElement>("#text");
+
+	console.log(txt);
 
 	my_console.innerText += txt + "\n";
 

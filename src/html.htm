@@ -1,18 +1,13 @@
-<script lang="ts">
-	import { progress_val, progress_max, opacity, visibility } from "./globals";
-	import { close } from "./close";
-</script>
-
-<div id="window" style="visibility:{$visibility}; opacity: {$opacity};">
+<div id="window" style="visibility:visible; opacity: 1;">
 	<div id="bar">
 		<div id="window-text">הורדה מאתר Jewish-music.Fm</div>
-		<div id="close" on:click={close} />
+		<div id="close" on:click="close()" ></div>
 	</div>
 
 	<div id="window-content">
-		<progress value={$progress_val} max={$progress_max} />
+		<progress value="0" max="1"></progress>
 
-		<div id="text" />
+		<div id="text"></div>>
 		<div id="credit">
 			<a href="https://github.com/MusiCode1/jewish-music.fm" target="_">
 				<em>MusiCode</em>

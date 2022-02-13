@@ -1,12 +1,14 @@
 
 import { download_all_songs } from "./download-all-songs";
 import { my_require } from "./my-require";
-import app_div from "./app_element";
+import { add_html } from "./html";
 import { close } from "./close";
 import { check } from "./check";
-import App from "./App.svelte";
 
-(async () => {
+(window["download_from_jewish_music"] = async function download_from_jewish_music() {
+
+	const app = document.querySelector(".download_from_jewish_music");
+
 	try {
 
 		console.log("Musicode7");
@@ -14,13 +16,13 @@ import App from "./App.svelte";
 
 		check();
 
+		if (!app) {
+			await add_html();
+		}
+
 		await my_require("https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js");
 
-		new App({
-			target: app_div
-		});
-
-		download_all_songs().finally(() => {
+		await download_all_songs().finally(() => {
 
 			close();
 		});
@@ -35,6 +37,7 @@ import App from "./App.svelte";
 		} else {
 
 			alert(error);
+			close();
 			throw error;
 		}
 	}

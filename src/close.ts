@@ -1,14 +1,18 @@
-import { opacity, visibility, stop_function } from "./globals";
-import app_div from "./app_element";
+import { stop_function } from "./globals";
+
+window.close = close;
+
 
 export function close() {
 
+    const app = document.querySelector<HTMLElement>("#window");
+
     stop_function.v = true;
 
-    opacity.set(0);
-    visibility.set("hidden");
+    app.style.opacity = "0";
+    app.style.visibility = "hidden";
 
     setTimeout(() => {
-        app_div.remove();
+        app.remove();
     }, 3 * 1000);
 }

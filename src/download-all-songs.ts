@@ -1,10 +1,11 @@
 
-import { progress_max, progress_val, stop_function } from './globals';
+import { stop_function } from './globals';
 import { my_console_log } from "./my-console-log";
 import { download_song } from "./download-song";
 import type { Song } from "./Song";
 import { lang_text } from "./text";
 import format from "format-util";
+
 
 
 function get_all_songs() {
@@ -33,11 +34,13 @@ function get_all_songs() {
 
 export async function download_all_songs() {
 
+	const progress = document.querySelector<HTMLProgressElement>("progress");
+
 	const audio_list = get_all_songs();
 
 	let zip = new window["JSZip"]();
 
-	progress_max.set(audio_list.length);
+	progress.max = audio_list.length
 
 	let i = 0;
 
@@ -63,7 +66,9 @@ export async function download_all_songs() {
 
 		i++;
 
-		progress_val.set(i);
+		progress.value = i;
+
+		//progress_val.set(i);
 	}
 
 	my_console_log(
