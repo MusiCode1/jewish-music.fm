@@ -1,9 +1,9 @@
-import svelte from 'rollup-plugin-svelte';
+//import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import livereload from 'rollup-plugin-livereload';
+//import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import sveltePreprocess from 'svelte-preprocess';
+//import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 //import css from 'rollup-plugin-css-only';
 
@@ -34,24 +34,12 @@ export default [
 	{
 		input: 'src/main.ts',
 		output: {
-			sourcemap: !production,
+			sourcemap: false,
 			format: 'iife', // "cjs", "iife"
 			name: 'app',
 			file: 'public/build/bundle.js'
 		},
 		plugins: [
-			svelte({
-
-				emitCss: false,
-
-				preprocess: sveltePreprocess({ sourceMap: !production }),
-				compilerOptions: {
-					// enable run-time checks when not in production
-					dev: !production
-				}
-			}),
-
-
 			// If you have external dependencies installed from
 			// npm, you'll most likely need these plugins. In
 			// some cases you'll need additional configuration -
@@ -59,21 +47,12 @@ export default [
 			// https://github.com/rollup/plugins/tree/master/packages/commonjs
 			resolve({
 				browser: true,
-				dedupe: ['svelte']
 			}),
 			commonjs(),
 			typescript({
-				sourceMap: !production,
-				inlineSources: !production
+				sourceMap: false,
+				inlineSources: false
 			}),
-
-			// In dev mode, call `npm run start` once
-			// the bundle has been generated
-			!production && serve(),
-
-			// Watch the `public` directory and refresh the
-			// browser on changes when not in production
-			!production && livereload('build'),
 
 			// If we're building for production (npm run build
 			// instead of npm run dev), minify
@@ -83,7 +62,7 @@ export default [
 			clearScreen: false
 		}
 	},
-	{
+	/* {
 		input: 'src/require-main.ts',
 		output: {
 			sourcemap: false,
@@ -93,8 +72,8 @@ export default [
 		},
 		plugins: [
 			typescript({
-				sourceMap: !production,
-				inlineSources: !production
+				//sourceMap: !production,
+				//inlineSources: !production
 			}),
 
 			// If you have external dependencies installed from
@@ -115,6 +94,6 @@ export default [
 		watch: {
 			clearScreen: false
 		}
-	}
+	} */
 
 ];

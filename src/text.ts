@@ -3,6 +3,8 @@ export const lang_text = {
 
     zipping_file: "דוחס את קובץ %s...",
 
+    make_file: "מכין קובץ להורדה...",
+
     ready: "הקובץ מוכן להורדה!",
 
     download: "מקובץ %s ירדו %s מתוך %s",

@@ -72,10 +72,14 @@ export async function download_all_songs() {
 	}
 
 	my_console_log(
-		format(lang_text.ready)
+		format(lang_text.make_file)
 	);
 
 	await save_zip_file(zip);
+
+	my_console_log(
+		format(lang_text.ready)
+	);
 
 }
 
@@ -86,6 +90,10 @@ async function save_zip_file(zip) {
 		file_name = `${albom_title} - ${albom_art}`;
 
 	const zipFile = await zip.generateAsync({ type: "blob" });
+
+	if (stop_function.v) {
+		throw new Error("window closed!");
+	}
 
 	save_blob_file(zipFile, file_name);
 }

@@ -1,7 +1,7 @@
 
 import { download_all_songs } from "./download-all-songs";
 import { my_require } from "./my-require";
-import { add_html } from "./html";
+import { add_html } from "./add_html";
 import { close } from "./close";
 import { check } from "./check";
 
