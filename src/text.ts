@@ -1,15 +1,17 @@
 export const lang_text = {
-    is_download_file: "מוריד את קובץ %s...",
+  is_download_file: "מוריד את קובץ %s...",
 
-    zipping_file: "דוחס את קובץ %s...",
+  error_download_file: "אירעה שגיאה בעת הורדת קובץ %s",
 
-    make_file: "מכין קובץ להורדה...",
+  zipping_file: "דוחס את קובץ %s...",
 
-    ready: "הקובץ מוכן להורדה!",
+  make_file: "מכין קובץ להורדה...",
 
-    download: "מקובץ %s ירדו %s מתוך %s",
+  ready: "הקובץ מוכן להורדה!",
 
-    is_not_site: "אתר זה, איננו " + "jewishmusic.fm!",
+  download: "מקובץ %s ירדו %s מתוך %s",
 
-    empty_audio: "בדף זה, אין קבצי אודיו!"
+  is_not_site: "אתר זה, איננו " + "jewishmusic.fm!",
+
+  empty_audio: "בדף זה, אין קבצי אודיו!",
 };
