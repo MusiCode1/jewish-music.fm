@@ -1,6 +1,8 @@
 export const lang_text = {
   is_download_file: "מוריד את קובץ %s...",
 
+  is_download_image: "מוריד את תמונת האלבום...",
+
   error_download_file: "אירעה שגיאה בעת הורדת קובץ %s",
 
   zipping_file: "דוחס את קובץ %s...",

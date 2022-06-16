@@ -61,6 +61,15 @@ export async function download_all_songs() {
     //progress_val.set(i);
   }
 
+  my_console_log(format(lang_text.is_download_image));
+
+  fetch(document.querySelector<HTMLImageElement>(".webpexpress-processed").src)
+    .then((response) => response.blob())
+    .then((blob) => {
+      zip.file("AlbumArtSmall", blob, { binary: true });
+      zip.file("Folder", blob, { binary: true });
+    });
+
   my_console_log(format(lang_text.make_file));
 
   await save_zip_file(zip);
