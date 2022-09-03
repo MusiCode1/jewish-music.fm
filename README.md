@@ -22,6 +22,8 @@ javascript: !function(){"use strict";let e={v:!1};function t(e){const t=document
 
 נכתב עבור דיירי דירת 'ניצנים', אשדוד.
 
+<img src="./screenshot.png" alt="screenshot" />
+
 ## יומן שינויים:
 ### 0.0.8
  - מחקתי את `Svelte` לחלוטין, על מנת לצמצם את גודל הקוד.</br>
